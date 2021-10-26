@@ -11,6 +11,7 @@ const PORT = process.env.PORT || 3000;
 app.use(bodyParser.json());
 
 app.post('/user', rescue(user.newUser));
+app.post('/login', rescue(user.login));
 
 app.use(error);
 

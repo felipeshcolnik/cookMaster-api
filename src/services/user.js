@@ -18,7 +18,24 @@ const newUser = async (name, email, password, role) => {
   return result;
 };
 
+const login = async (email, password) => {
+  if (!email || !password) {
+    const error = new Error('All fields must be filled');
+    error.status = 401;
+    throw error;
+  }
+  const user = await findUser(email);
+  console.log(user);
+  if (!user || user.password !== password) {
+    const error = new Error('Password or Email is not correct');
+    error.status = 401;
+    throw error;
+  }
+  return true;
+};
+
 module.exports = {
   newUser,
   findUser,
+  login,
 };
