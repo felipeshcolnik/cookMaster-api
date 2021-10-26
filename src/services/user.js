@@ -5,6 +5,6 @@ const newUser = async (name, email, password, role) => {
   return result;
 };
 
-module.export = {
+module.exports = {
   newUser,
 };
