@@ -22,5 +22,8 @@
   "dependencies": {
     "eslint-config-trybe-backend": "^1.0.4",
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.1.0"
   }
 }
