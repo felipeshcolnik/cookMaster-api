@@ -6,11 +6,10 @@ const findUser = async (email) => {
     .then((result) => result);
 };
 
-const newUser = async (name, email, password, role) => {
-  connection()
+const newUser = async (name, email, password, role) => 
+   connection()
     .then((db) => db.collection('users').insertOne({ name, email, password, role }))
-    .then((result) => result.ops[0]);
-};
+    .then((result) => ({ id: result.insertedId, name, email, password, role }));
 
 module.exports = { 
   findUser,
