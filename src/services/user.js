@@ -11,7 +11,7 @@ const newUser = async (name, email, password, role) => {
   const userAlreadyExists = await findUser(email);
   if (userAlreadyExists) {
     const error = new Error('Email already registered');
-    error.status = '409';
+    error.status = 409;
     throw error;
   }
   const result = await model.newUser(name, email, password, role);
