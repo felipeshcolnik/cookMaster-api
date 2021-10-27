@@ -1,31 +1,27 @@
-# Cookmaster Project
+# Sobre o Cookmaster Project
+Este projeto visa interligar um banco de dados de usuarios, e receitas,onde é possível incluir informações de texto e imagens. Para criar, editar e apagar receitas, a aplicação passa por uma autenticação do usuário, verificando se este efetuou login e senha corretos, e se este usuário pode apagar ou editar tal receita(só é possível se ele for o criador da receita, ou se for um usuario com perfil 'admin'). 
 
-# Habilidades
+# Informação para pessoas da área de T.I.
+- Esta aplicação utiliza uma conexão de banco de dados mongoDb.
+- A conexão é feita através de APIs REST.
+- Utilização do pacote express para criar as rotas das requisições.
+- Utilização do padrão MSC para organização do código.
+- Para fazer upload de arquivos, utilizo o pacote Multer.
+- A geração e verificação de tokens é do tipo JWT (JsonWebTokem).
 
-Neste projeto, você será capaz de:
 
-Entender o que há por dentro de um token de autenticação;
+# Como rodar o projeto:
 
-Gerar tokens a partir de informações como login e senha;
+1- Fazer o clone do projeto para sua máquina utilizando o seguinte comando em seu terminal:
+'git clone git@github.com:felipeshcolnik/cookMaster-api.git'
+2- Instalar as dependencias necessárias para o projeto funcionar corretamente:
+'npm install'
+3- Iniciar a aplicação digitando:
+'npm start'
+4- Iniciar o banco de dados, neste caso o MongoDB
+'sudo systemctl start mongod.service' ou apenas 'mongo'
 
-Autenticar rotas do Express, usando o token JWT;
 
-Fazer upload de arquivos em APIs REST;
+# Contato:
 
-Salvar arquivos no servidor através de uma API REST;
-
-Consultar arquivos do servidor através de uma api REST.Habilidades
-Neste projeto, você será capaz de:
-
-Entender o que há por dentro de um token de autenticação;
-
-Gerar tokens a partir de informações como login e senha;
-
-Autenticar rotas do Express, usando o token JWT;
-
-Fazer upload de arquivos em APIs REST;
-
-Salvar arquivos no servidor através de uma API REST;
-
-Consultar arquivos do servidor através de uma api REST.
-
+Qualquer dúvida, entre em contato através do email: shcolnik@gmail.com
