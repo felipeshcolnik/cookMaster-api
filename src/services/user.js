@@ -1,5 +1,6 @@
 const model = require('../models/user');
 const validate = require('../utils/validationFcts');
+const jwt = require('../utils/jsonWebToken');
 
 const findUser = async (email) => {
   const user = await model.findUser(email);
@@ -18,19 +19,20 @@ const newUser = async (name, email, password, role) => {
   return result;
 };
 
-const login = async (email, password) => {
-  if (!email || !password) {
+const login = async (email, pass) => {
+  if (!email || !pass) {
     const error = new Error('All fields must be filled');
     error.status = 401;
     throw error;
   }
   const user = await findUser(email);
-  if (!user || user.password !== password) {
-    const error = new Error('Password or Email is not correct');
+  if (!user || user.password !== pass) {
+    const error = new Error('Incorrect email or password');
     error.status = 401;
     throw error;
   }
-  return true;
+  const { password, ...payload } = user;
+  return jwt.generateToken(payload);
 };
 
 module.exports = {

@@ -3,7 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const rescue = require('express-rescue');
 const user = require('./src/controllers/user');
-const error = require('./src/utils/errorMidleware');
+const { error } = require('./src/utils/otherMidlewares');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
