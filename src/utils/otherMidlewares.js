@@ -5,9 +5,11 @@ const error = (err, _req, res, _next) => {
   if (err.status) return res.status(err.status).json({ message: err.message });
 };
 
-const validateToken = (req, _res) => {
+const validateToken = (req, _res, next) => {
   const { authorization } = req.headers;
-  verifyToken(authorization);
+  const payload = verifyToken(authorization);
+  req.user = payload;
+  next();
 };
 
 module.exports = {
