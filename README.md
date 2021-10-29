@@ -1,7 +1,7 @@
 # Sobre o Cookmaster Project
 Este projeto visa interligar um banco de dados de usuarios, e receitas,onde é possível incluir informações de texto e imagens. Para criar, editar e apagar receitas, a aplicação passa por uma autenticação do usuário, verificando se este efetuou login e senha corretos, e se este usuário pode apagar ou editar tal receita(só é possível se ele for o criador da receita, ou se for um usuario com perfil 'admin'). 
 
-# Informação para pessoas da área de T.I.
+# Informações para pessoas da área de T.I.
 - Esta aplicação utiliza uma conexão de banco de dados mongoDb.
 - A conexão é feita através de APIs REST.
 - Utilização do pacote express para criar as rotas das requisições.
