@@ -13,13 +13,15 @@ Este projeto visa interligar um banco de dados de usuarios, e receitas,onde é p
 # Como rodar o projeto:
 
 1- Fazer o clone do projeto para sua máquina utilizando o seguinte comando em seu terminal:
-'git clone git@github.com:felipeshcolnik/cookMaster-api.git'
+```git clone git@github.com:felipeshcolnik/cookMaster-api.git```
 2- Instalar as dependencias necessárias para o projeto funcionar corretamente:
-'npm install'
+```npm install```
 3- Iniciar a aplicação digitando:
-'npm start'
-4- Iniciar o banco de dados, neste caso o MongoDB
-'sudo systemctl start mongod.service' ou apenas 'mongo'
+```npm start```
+4- Iniciar o banco de dados, neste caso o MongoDB, digitando no terminal:
+```sudo systemctl start mongod.service```
+ou apenas 
+```'mongo'```
 
 
 # Contato:
